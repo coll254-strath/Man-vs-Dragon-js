@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #3B82F6;
+  --primary-dark: #2563EB;
+  --background: #FFFFFF;
+  --text: #111827;
+  --text-secondary: #4B5563;
+  --card: #F9FAFB;
+  --border: #E5E7EB;
+}
+
+.dark {
+  --primary: #60A5FA;
+  --primary-dark: #3B82F6;
+  --background: #111827;
+  --text: #F9FAFB;
+  --text-secondary: #D1D5DB;
+  --card: #1F2937;
+  --border: #374151;
+}
+
+body {
+  @apply bg-[var(--background)] text-[var(--text)];
+  font-family: 'Inter', sans-serif;
+}
+
+.section {
+  @apply py-20 px-4 max-w-7xl mx-auto;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600;
+}
+
+.button-primary {
+  @apply bg-[var(--primary)] hover:bg-[var(--primary-dark)] text-white font-medium py-3 px-6 rounded-lg transition-all;
+}
+
+.button-secondary {
+  @apply border border-[var(--border)] bg-transparent hover:bg-[var(--card)] text-[var(--text)] font-medium py-3 px-6 rounded-lg transition-all;
+}
+
+.card {
+  @apply bg-[var(--card)] border border-[var(--border)] rounded-xl p-6 transition-all;
+}
